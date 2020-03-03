@@ -1,0 +1,10 @@
+#!/bin/csh
+#PBS -l wd
+#PBS -q normal
+#PBS -l ncpus=1
+#PBS -l walltime=24:00:00,mem=1GB
+module load R/3.5.1
+module unload intel-fc intel-cc
+module load intel-fc/2018.3.222
+module load intel-cc/2018.3.222
+Rscript --vanilla AV_single_NCI230119.R $var1
